@@ -9,6 +9,45 @@ return {
             vim.g.molten_image_provider = "image.nvim"
             vim.g.molten_output_win_max_height = 20
         end,
+        keys = {
+            {
+                "<leader>mi",
+                "<cmd>MoltenInit<cr>",
+                silent = true,
+                desc = "Initialize the plugin",
+            },
+            {
+                "<leader>mI",
+                "<cmd>MoltenInfo<cr>",
+                silent = true,
+                desc = "Show information"
+            },
+            {
+                "<leader>mo",
+                "<cmd>MoltenEvaluateOperator<cr>",
+                silent = true,
+                desc = "run operator selection",
+            },
+            {
+                "<leader>ml",
+                "<cmd>MoltenEvaluateLine<cr>",
+                silent = true,
+                desc = "evaluate line",
+            },
+            {
+                "<leader>mr",
+                "<cmd>MoltenReevaluateCell<cr>",
+                silent = true,
+                desc = "re-evaluate cell",
+            },
+            {
+                "<leader>mv",
+                ":<C-u>MoltenEvaluateVisual<cr>",
+                mode = "v",
+                silent = true,
+                desc = "evaluate visual selection",
+            },
+        },
     },
     {
         -- see the image.nvim readme for more information about configuring this plugin
